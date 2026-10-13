@@ -1,7 +1,7 @@
 
 var myTable = Table_1.getPlanning();
 
-var myVersion = myTable.getPublicVersion("Actual");
+var myVersion = myTable.getPublicVersion("Budget");
 // Check if the version has been modified before publishing.
 if (myVersion && myVersion.isDirty()) {
     myVersion.publish();
