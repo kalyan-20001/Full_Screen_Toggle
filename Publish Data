@@ -1,0 +1,11 @@
+
+var myTable = Table_1.getPlanning();
+
+var myVersion = myTable.getPublicVersion("Actual");
+// Check if the version has been modified before publishing.
+if (myVersion && myVersion.isDirty()) {
+    myVersion.publish();
+    Application.showMessage(ApplicationMessageType.Success, "Data published successfully.");
+} else {
+    Application.showMessage(ApplicationMessageType.Info, "No changes to publish.");
+}
